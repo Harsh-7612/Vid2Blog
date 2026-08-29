@@ -69,7 +69,7 @@ RESEARCHER_PROMPT = ChatPromptTemplate.from_messages([
         (
             "You are a senior YouTube research analyst. "
             "Study the provided YouTube search results and produce a clear, "
-            "factual 3-paragraph research report about the topic. "
+            "factual 3-paragraph research report about the topic only when something is found through the Youtube API "
             "Be accurate, concise, and informative."
         ),
     ),
@@ -79,7 +79,7 @@ RESEARCHER_PROMPT = ChatPromptTemplate.from_messages([
             "Topic: {topic}\n\n"
             "YouTube search results for channel '{channel}':\n"
             "{yt_results}\n\n"
-            "Write a comprehensive 3-paragraph research report based on these results."
+            "Write a comprehensive 3-paragraph research report based on these results and don't produce anything on your own. Only use the retrieved information as your knowledge base."
         ),
     ),
 ])
